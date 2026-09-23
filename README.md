@@ -1,7 +1,7 @@
 # Agent Team
 
 Agent Team is an early-preview command-line tool for setting up a configurable
-team of AI software-engineering agents on your own machine. The default team has
+team of AI agents on your own machine. The default team has
 three roles—Architect, Developer, and Tester—but each role, instruction file,
 and workflow assignment is configuration-driven.
 
@@ -14,11 +14,11 @@ The local deployment consists of:
   role.
 
 The project is designed around GitHub repositories and issues as the work
-record, with Zulip as the visible conversation between people and agents.
+record, with Zulip as the communication platform for people and agents.
 
 > [!IMPORTANT]
 > Agent Team is not yet a complete end-to-end agent runtime. The current public
-> preview can initialize a team, provision Zulip, and create a stopped Docker
+> preview can initialize a team, provision Zulip, and create a Docker
 > deployment. A supported command to start that deployment, plus GitHub and
 > Codex credential setup for the running agents, has not shipped yet. Use this
 > release to evaluate the configuration and provisioning workflow.
@@ -28,13 +28,12 @@ record, with Zulip as the visible conversation between people and agents.
 - Windows x64.
 - [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)
   running Linux containers, with Docker Compose available.
-- Network access to GitHub Releases, Docker Hub, and your Zulip server.
+- Network access to GitHub, Docker Hub, and your Zulip server.
 - An existing Zulip organization and an active human account allowed to create
   bots and private channels.
 - A personal [`zuliprc` file](https://zulip.com/api/api-keys) for that account.
 
-The host does not need the .NET runtime. The released executable is
-self-contained, and `agent-team create` pulls the matching, digest-pinned
+The released executable is self-contained, and `agent-team create` pulls the matching, digest-pinned
 Supervisor and Agent Runner images.
 
 ## Install
